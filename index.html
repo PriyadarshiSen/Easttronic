@@ -14,14 +14,17 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/white-apple-touch-icon.png">
   <link rel="manifest" href="./assets/img/favicon/site.webmanifest">
 
-  <title>EasTTronic Inc. | Perfect place for your technical needs</title>
+  <title>EasTTronic | Perfect place for your technical needs</title>
 
   <!-- Google Fonts -->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" />
   <!-- Vendor CSS Files -->
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
   <link rel="stylesheet" href="assets/vendor/aos/aos.css" />
-  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" />
   <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css" />
   <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
@@ -36,10 +39,12 @@
 <body>
   <!-- ======= Header ======= -->
   <header id="header" class="">
+
+    <!-- Navigation -->
     <nav id="navigation">
       <ul>
         <li class="lst active">
-          <a href="#home" class="active">
+          <a href="#home" class="">
             <span class="icon"><i class="bi bi-house-door-fill"></i></span>
             <span class="text">Home</span></a>
         </li>
@@ -48,16 +53,12 @@
             <span class="icon"><i class="bi bi-people-fill"></i></span>
             <span class="text">About</span></a>
         </li>
-
-
         <!-- Logo -->
         <li class="lst" style="pointer-events: none;">
           <a href="#home" class="">
-            <span class="icon"><img class="p-2 m-0 mt-1" src="./assets/img/LOGO-white.svg" alt="Logo" style="height: 2.5em;"></span>
-            <span class="text">Services</span></a>
-        </li>
-
-
+            <span class="icon"><img class="p-2 m-0 mt-1" src="./assets/img/LOGO-white.svg" alt="Logo"
+                style="height: 2.5em;"></span>
+        </li> <!-- Logo End -->
         <li class="lst">
           <a href="#service" class="">
             <span class="icon"><i class="bi bi-diagram-3-fill"></i></span>
@@ -68,29 +69,19 @@
             <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
             <span class="text">Contact</span></a>
         </li>
-        <!--li class="lst">
-          <a href="./Pages/Blog.html" class="">
-            <span class="icon"><i class="bi bi-newspaper"></i></span>
-            <span class="text">Blogs</span>
-          </a>
-        </li-->
-        <div class="indicator"></div>
       </ul>
-    </nav>
+    </nav> <!-- Navigation End -->
+
 
     <!-- Dark Mode Button-->
-    <div class="darkmode-btn">
-      <input type="checkbox" class="" id="chk" />
-      <label class="" for="chk">
-        <i class="bi bi-moon-stars-fill" style="color: white;"></i>
-        <i class="bi bi-sun-fill" style="color: yellow;"></i>
-        <div class="ball"></div>
-      </label>
-    </div>
+    <div id="dark-mode-toggle" class="darkmode-btn">
+      <div class="ball"></div>
+      <i class="bi bi-moon-stars-fill" style="color: white;"></i>
+      <i class="bi bi-sun-fill" style="color: yellow;"></i>
+    </div> <!-- Dark Mode End-->
+
 
   </header> <!-- End Header -->
-
-
 
 
   <!--====================================================================-->
@@ -110,7 +101,10 @@
   </section>
   <!-- End Hero Section -->
 
-  <main id="main" data-bs-spy="scroll" data-bs-target="#navigation" data-bs-offset="0" tabindex="0">
+
+  <main id="main">
+    <!-- Main Sections Start -->
+
     <!-- ======= About Section ======= -->
     <section id="about">
       <div class="container" data-aos="fade-up">
@@ -122,7 +116,7 @@
           <div class="col-lg-4 text-justify">
             <h2>About</h2>
             <p class="">
-              We combines tech solutions and Business expertise to bring change and deliver results.<br>Helping clients
+              We combines tech solutions and business expertise to bring change and deliver results. Helping clients
               to evolve and stay relevant in the market.
             </p>
           </div>
@@ -137,7 +131,6 @@
       </div>
     </section>
     <!-- End About Section -->
-
 
 
     <!-- ======= Service Section ======= -->
@@ -218,26 +211,9 @@
               <img src="assets/img/service/5.jpg" alt="service 5" class="img-fluid" />
               <div class="details">
                 <h3>
-                  <a href="./Pages/Services.html#Alliance">Third Party Outsourcing</a>
+                  <a href="./Pages/Services.html#Alliance">Strategic Alliances</a>
                 </h3>
-                <p>With Strategic Partners</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="service" data-aos="fade-up" data-aos-delay="300">
-              <img src="assets/img/service/6.jpg" alt="service 6" class="img-fluid" />
-              <div class="details">
-                <h3>
-                  <a href="./Pages/Services.html#Production">Easttronic Productions</a>
-                </h3>
-                <p>Reach to the Top</p>
+                <p>For Productivity and efficiency</p>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -253,34 +229,12 @@
     <!-- End Service Section -->
 
 
-
-    <!-- ======= Subscribe Section ======= -->
-    <section id="subscribe">
-      <div class="container" data-aos="zoom-in">
-        <div class="section-header">
-          <h2>Subscribe</h2>
-          <p>Subscribe to keep updated</p>
-        </div>
-
-        <form method="POST" action="#">
-          <div class="row justify-content-center">
-            <div class="col-lg-6 col-md-10 d-flex">
-              <input type="text" class="form-control" placeholder="Enter your Email" />
-              <button type="submit" class="ms-2">Subscribe</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </section>
-    <!-- End Subscribe Section -->
-
-
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="section-bg">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h2>Contact Us</h2>
-          <p>Nihil officia ut sint molestiae tenetur.</p>
+          <p></p>
         </div>
 
         <div class="row contact-info">
@@ -289,9 +243,8 @@
               <i class="bi bi-geo-alt"></i>
               <h3>Address</h3>
               <address>
-                69, Garfa Main Rd, Lal Gate<br />
-                Ramlal Bazar, Haltu, Kolkata<br />
-                West Bengal, India 700078<br />
+                Haltu, Kolkata<br />
+                West Bengal 700078<br />
               </address>
             </div>
           </div>
@@ -308,59 +261,26 @@
             <div class="contact-email">
               <i class="bi bi-envelope"></i>
               <h3>Email</h3>
-              <p><a href="mailto:easttronics@gmail.com">easttronics@gmail.com</a></p>
+              <p><a href="mailto:easttronic@gmail.com">easttronic@gmail.com</a></p>
             </div>
           </div>
         </div>
 
-        <div class="row container map-form-section">
-          <!-- Map -->
-          <div class="mb-4 col-lg-6 location-map">
+        <!-- Map -->
+        <div class="container map-form-section">
+          <div class="m-2 location-map">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.0040031138606!2d88.38237031426945!3d22.50403298521814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027147d33cfe49%3A0x9939106dc983081!2s69%2C%20Garfa%20Main%20Rd%2C%20Lal%20Gate%2C%20Ramlal%20Bazar%2C%20Haltu%2C%20Kolkata%2C%20West%20Bengal%20700078!5e0!3m2!1sen!2sin!4v1646843905617!5m2!1sen!2sin"
-              frameborder="0" allowfullscreen>
-            </iframe>
-          </div>
-
-          <!-- Form -->
-          <div class="form col-md-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required />
-                </div>
-                <div class="form-group col-md-6 mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required />
-                </div>
-              </div>
-
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required />
-              </div>
-
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">
-                  Your message has been sent. Thank you!
-                </div>
-              </div>
-
-              <div class="text-center">
-                <button type="submit">Send Message</button>
-              </div>
-
-            </form>
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29488.11066758636!2d88.37172158034214!3d22.503664153955956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027148e50a3593%3A0x7fb8d330f98a5eb1!2sHaltu%2C%20Kolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1651564026216!5m2!1sen!2sin"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
     </section>
     <!-- End Contact Section -->
-  </main>
+
+
+  </main> <!-- Main Sections End -->
   <!-- End #main -->
   <!--====================================================================-->
 
@@ -373,7 +293,7 @@
         <div class="row">
           <div class="col-lg-6 col-md-6 footer-info">
             <img class="" src="assets/img/LOGO-white.svg" alt="Easttronic" />
-            <span>Easttronics</span>
+            <span>Easttronic</span>
             <p>
               We offer creative solutions and affordable services in the areas of Website Development, Data Science &
               Analytics, Cloud Supply chain, ERP Solutions, IOT, Digital Marketing andand other technology domains for
@@ -407,11 +327,10 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contact Us</h4>
             <p>
-              69, Garfa Main Rd <br />
-              Lal Gate, Ramlal Bazar, Haltu<br />
-              Kolkata, West Bengal 700078<br />
-              <strong>Phone : </strong>+91 7002910496<br />
-              <strong>Email : </strong>easttronics@gmail.com<br />
+              Haltu, Kolkata<br />
+              West Bengal 700078<br />
+              <strong>Phone : <br /></strong>+91 7002910496<br />+91 8787494440<br />
+              <strong>Email : </strong>easttronic@gmail.com<br />
             </p>
 
             <div class="social-links">
@@ -434,6 +353,7 @@
   </footer>
   <!-- End  Footer -->
 
+
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
@@ -441,8 +361,13 @@
   <!-- ======= JS ======= -->
 
   <!-- Vendor JS Files -->
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
@@ -450,7 +375,7 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <!-- Custom JS -->
+  <!-- JS -->
   <script src="./assets/js/custom.js"></script>
 </body>
 

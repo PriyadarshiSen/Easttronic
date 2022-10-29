@@ -8,11 +8,32 @@ function activeLink() {
 
 lst.forEach((item) => item.addEventListener("click", activeLink));
 
-// scroll //
 
 /* Dark Mode */
-const chk = document.getElementById("chk");
+let darkMode = localStorage.getItem('darkMode');
 
-chk.addEventListener("change", () => {
-  document.body.classList.toggle("dark");
+const darkModeToggle = document.querySelector('#dark-mode-toggle');
+
+const enableDarkMode = () => {
+  document.body.classList.add('darkmode');
+  localStorage.setItem('darkMode', 'enabled');
+}
+
+const disableDarkMode = () => {
+  document.body.classList.remove('darkmode');
+  localStorage.setItem('darkMode', null);
+}
+
+if (darkMode === 'enabled') {
+  enableDarkMode();
+}
+
+
+darkModeToggle.addEventListener('click', () => {
+  darkMode = localStorage.getItem('darkMode');
+  if (darkMode !== 'enabled') {
+    enableDarkMode();
+  } else {
+    disableDarkMode();
+  }
 });
