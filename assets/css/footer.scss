@@ -1,0 +1,146 @@
+/*
+
+|||||  ||||  //// ||||| ||||| |||\    /|\   |\  |  ||   /||\
+||    |  || ||      |     |   ||  |  || ||  | \ |  ||  ||
+||||| |||||  \\\    |     |   ||||   || ||  | | |  ||  ||
+||    |  ||    ||   |     |   ||  |  || ||  | | |  ||  ||
+||||| |  || ////    |     |   ||  |   \|/   | |/   ||   \||/
+
+*/
+
+
+
+// Libraries //
+@import "./header.scss";
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+    background: #101522;
+    padding: 0 0 25px 0;
+    color: #eee;
+    font-size: 14px;
+    .footer-top {
+        background: #040919;
+        padding: 60px 0 30px 0;
+        .footer-info {
+            margin-bottom: 30px;
+            text-align: justify;
+            h3 {
+                font-size: 26px;
+                margin: 0 0 20px 0;
+                padding: 2px 0 2px 0;
+                line-height: 1;
+                font-family: "Raleway", sans-serif;
+                font-weight: 700;
+                color: #fff;        }
+            p {
+                font-size: 14px;
+                line-height: 24px;
+                margin-bottom: 0;
+                font-family: "Raleway", sans-serif;
+                color: #fff;        }
+            span {
+                font-size: 2.2em;     }
+            img {
+                height: 5em;
+                margin-bottom: 10px;  } }
+
+        .social-links {
+            a {
+                display: inline-block;
+                background: #222636;
+                color: #eee;
+                line-height: 1;
+                margin-right: 4px;
+                border-radius: 50%;
+                width: 36px;
+                height: 36px;
+                transition: 0.3s;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                &:hover {
+                    background: $theme-blue;
+                    color: #fff;    }
+                i {
+                    line-height: 0;
+                    font-size: 16px;  } } }
+        
+        .footer-links {
+            margin-bottom: 30px;
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                i {
+                    padding-right: 5px;
+                    color: $theme-blue;
+                    font-size: 18px;    }
+                li {
+                    border-bottom: 1px solid #262c44;
+                    padding: 10px 0;
+                    &:first-child {
+                        padding-top: 0; } }
+                a {
+                    color: #eee;
+                    &:hover {
+                        color: $theme-blue;
+                    } 
+                } 
+            } 
+        }
+        h4 {
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 12px;
+            border-bottom: 2px solid $theme-blue;   
+        }
+        .footer-contact {
+            margin-bottom: 30px;
+            p {
+                line-height: 26px;  } }
+        .footer-newsletter {
+            margin-bottom: 30px;
+            input[type="email"] {
+                border: 0;
+                padding: 6px 8px;
+                width: 65%;         }
+            input[type="submit"] {
+                background: $theme-blue;
+                border: 0;
+                width: 35%;
+                padding: 6px 0;
+                text-align: center;
+                color: #fff;
+                transition: 0.3s;
+                cursor: pointer;    }
+            input[type="submit"]:hover {
+                background: $theme-blue;    
+            }
+        }
+    }
+    .copyright {
+        text-align: center;
+        padding-top: 30px;  }
+    .credits {
+        text-align: center;
+        font-size: 13px;
+        color: #ddd;      }
+}
+
+@media (max-width: 768px) {}
+
+
+
+#copyright {
+    height: 150px;
+    span {
+        color: $theme-blue;
+        font-weight: bold;  }
+}

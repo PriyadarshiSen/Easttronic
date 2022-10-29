@@ -1,0 +1,429 @@
+/*
+
+|||||  ||||  //// ||||| ||||| |||\    /|\   |\  |  ||   /||\
+||    |  || ||      |     |   ||  |  || ||  | \ |  ||  ||
+||||| |||||  \\\    |     |   ||||   || ||  | | |  ||  ||
+||    |  ||    ||   |     |   ||  |  || ||  | | |  ||  ||
+||||| |  || ////    |     |   ||  |   \|/   | |/   ||   \||/
+
+*/
+
+
+
+// Libraries //
+@import "./header.scss";
+@import "./footer.scss";
+
+/*----------------------------------------*
+# General Header
+*----------------------------------------*/
+.section-header {
+    margin-bottom : 60px;
+    position      : relative;
+    padding-bottom: 20px;
+    &::before {
+        content     : "";
+        background  : $theme-blue;
+        position    : absolute;
+        display     : block;
+        height      : 5px;
+        width       : 60px;
+        left        : calc(50% - 25px);
+        bottom      : 0;            }
+    h2 {
+        font-size   : 36px;
+        text-align  : center;
+        font-weight : 700;
+        margin-bottom : 10px;
+        text-transform: uppercase;  }
+    p {
+        text-align  : center;
+        padding     : 0;
+        margin      : 0;
+        font-size   : 18px;
+        font-weight : 500;
+        color       : var(--darkmode-txt-dark);  }
+}
+
+
+
+/*----------------------------------------*
+# Hero Section
+*----------------------------------------*/
+#home {
+    width   : 100%;
+    height  : 100vh;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    &::before {
+        content : "";
+        position: absolute;
+        bottom  : 0;
+        top     : 0;
+        left    : 0;
+        right   : 0;
+        background  : rgba(6, 12, 34, 0.8); }
+    h1 {
+        color       : #fff;
+        font-family : "Raleway", sans-serif;
+        font-size   : 56px;
+        font-weight : 600;
+        text-transform: uppercase;
+        span {
+            color   : $theme-blue;      }   }
+    p {
+        color       : #ebebeb;
+        font-weight : 700;
+        font-size   : 20px;
+        text-transform: uppercase;      }
+    .hero-container {
+        position: absolute;
+        top     : 7em;
+        left    : 0;
+        right   : 0;
+        display : flex;
+        text-align  : center;
+        padding     : 0 15px;
+        justify-content : center;
+        align-items     : center;
+        flex-direction  : column;
+        .decoration {
+            backdrop-filter : blur(1px);
+            border-radius   : 10px;
+            padding         : 1em;      }   }
+
+    .about-btn {
+        display : inline-block;
+        padding : 12px 32px;
+        margin  : 10px;
+        color   : #fff;
+        border  : 2px solid $theme-blue;
+        transition  : 0.5s;
+        line-height : 1;
+        font-family : "Raleway", sans-serif;
+        font-weight : 500;
+        font-size   : 14px;
+        letter-spacing  : 1px;
+        border-radius   : 50px;
+        -webkit-animation-delay : 0.8s;
+        animation-delay         : 0.8s;
+        &:hover {
+            background  : $theme-blue;
+            color       : black;    }   }
+}
+
+#background-video {
+    width   : 100vw;
+    height  : 100vh;
+    object-fit  : cover;
+    position    : relative;
+    left    : 0;
+    right   : 0;
+    top     : 0;
+    bottom  : 0;
+    filter  : brightness(50%);
+}
+  
+
+// Media Quaries //
+@media (min-width: 1024px) {
+    #home { background-attachment: fixed; } }
+
+@media (max-width: 991px) {
+    #home{
+        .hero-container { top: 10em; }
+        h1  { font-size: 34px; }
+        p   { font-size: 16px; } } }
+
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+#about {
+    background  : url("../img/about-bg.jpg");
+    background-size : cover;
+    overflow    : hidden;
+    position    : relative;
+    color       : #fff;
+    padding     : 60px 0 40px 0;
+    &::before {
+        content : "";
+        background: rgba(13, 20, 41, 0.8);
+        position: absolute;
+        bottom  : 0;
+        top     : 0;
+        left    : 0;
+        right   : 0;              }
+    h2 {
+        font-size       : 36px;
+        font-weight     : bold;
+        margin-bottom   : 10px;
+        color           : #fff; }
+    h3 {
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        color: #fff;            }
+    p {
+        font-size: 14px;
+        margin-bottom: 20px;
+        color: #fff;            }
+}
+
+// Media Quaries //
+@media (min-width: 1024px) {
+    #about { background-attachment: fixed; }
+}
+
+
+/*--------------------------------------------------------------
+# Services Section
+--------------------------------------------------------------*/
+#service {
+    padding: 60px 0 30px 0;
+    .service {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 30px;
+        &:hover {
+            .details {
+                bottom: 0;          }   }
+
+        .details {
+            background: rgba(6, 12, 34, 0.76);
+            position: absolute;
+            left: 0;
+            bottom: -40px;
+            right: 0;
+            text-align: center;
+            padding-top: 10px;
+            transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+            h3 {
+                color: #fff;
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 5px;     }
+            p {
+                color: #fff;
+                font-size: 15px;
+                margin-bottom: 10px;
+                font-style: italic;     }
+            .social {
+                height: 40px;
+                a { pointer-events: none; }         // pointer-event : None; //
+                i {
+                    line-height: 0;
+                    margin: 0 2px;      }   }
+            a {
+                color: #fff;
+                &:hover {
+                    color: $theme-blue;
+                }   }   }
+    }
+}
+  
+#service-details {
+    padding: 60px 0;
+    .details { 
+        h2 {
+            color: #112363;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;    }
+        p {
+            color: #112363;
+            font-size: 15px;
+            margin-bottom: 10px;    }
+        .social {
+            margin-bottom: 15px;
+            a {
+                background: #e9edfb;
+                color: #112363;
+                line-height: 1;
+                display: inline-block;
+                text-align: center;
+                border-radius: 50%;
+                width: 36px;
+                height: 36px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                &:hover {
+                    background: $theme-blue;
+                    color: #fff;    }   }
+            i {
+                font-size: 16px;
+                line-height: 0;       }   } }
+}
+
+
+  
+/*--------------------------------------------------------------
+# Subscribe Section
+--------------------------------------------------------------*/
+#subscribe {
+    padding: 60px;
+    background: url(../img/Subscribe/2.jpg) center center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    &:before {
+        content: "";
+        background: rgba(6, 12, 34, 0.6);
+        backdrop-filter: blur(2px);
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .section-header h2, p {
+        color: #fff;
+    }
+    input {
+        background: #fff;
+        color: #060c22;
+        border: 0;
+        outline: none;
+        margin: 0;
+        padding: 9px 20px;
+        border-radius: 50px;
+        font-size: 14px;
+    }
+    button {
+        border: 0;
+        padding: 9px 25px;
+        cursor: pointer;
+        background: $theme-blue;
+        color: black;
+        transition: all 0.3s ease;
+        outline: none;
+        font-size: 14px;
+        border-radius: 50px;
+        &:hover {
+            background: $theme-dark-blue;
+            color: white;
+        }
+    }
+}
+
+
+// Media Queries //
+@media (min-width: 1024px) {
+    #subscribe { background-attachment: fixed; } }
+@media (min-width: 767px) {
+    #subscribe input { min-width: 400px; } }
+@media (max-width: 460px) {
+    #subscribe button { margin-top: 10px; } }
+  
+  
+  
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+#contact {
+    padding: 60px 0;
+    .contact-info {
+        margin-bottom: 20px;
+        text-align: center;
+        i {
+            font-size: 48px;
+            display: inline-block;
+            margin-bottom: 10px;
+            color: $theme-blue;     }
+        address,
+        p {
+            margin-bottom: 0;
+            color: $darkmode-txt;   }
+        h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-transform: uppercase;}
+        a {
+            color: $darkmode-txt;
+            &:hover {
+                color: $theme-blue;     } } }
+    .contact-address,
+    .contact-phone,
+    .contact-email {
+        margin-bottom: 20px; }
+}
+
+
+@media (min-width: 768px) {
+    #contact {
+        .contact-address,
+        .contact-phone,
+        .contact-email {
+            padding: 20px 0; }
+        .contact-phone {
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd; } }
+}
+
+  
+iframe { 
+    min-height: 300px;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+  
+#contact {
+    .php-email-form {
+        .error-message {
+            display: none;
+            color: #fff;
+            background: #ed3c0d;
+            text-align: left;
+            padding: 15px;
+            font-weight: 600;       }
+        .error-message br + br {
+            margin-top: 25px;       }
+        .sent-message {
+            display: none;
+            color: #fff;
+            background: #18d26e;
+            text-align: center;
+            padding: 15px;
+            font-weight: 600;       }
+        .loading {
+            display: none;
+            background: #fff;
+            text-align: center;
+            padding: 15px;
+            &:before {
+                content: "";
+                display: inline-block;
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                margin: 0 10px -6px 0;
+                border: 3px solid #18d26e;
+                border-top-color: #eee;
+                -webkit-animation: animate-loading 1s linear infinite;
+                animation: animate-loading 1s linear infinite;          } }
+        input,
+        textarea {
+            border-radius: 10px;
+            box-shadow: none;
+            font-size: 14px;
+            &:focus {
+                border-color: $theme-blue;  } }
+        input { padding: 10px 15px;     }
+        textarea { padding: 12px 15px;  }
+
+        button[type="submit"] {
+            background: $theme-dark-blue;
+            border: 0;
+            padding: 10px 40px;
+            color: #fff;
+            transition: 0.4s;
+            border-radius: 50px;
+            cursor: pointer;
+            &:hover {
+                background: $theme-blue; } } }
+}
